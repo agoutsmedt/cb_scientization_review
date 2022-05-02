@@ -1,0 +1,36 @@
+---
+title: "Analysing Literature on Scientisation"
+author: "Aurélien Goutsmedt"
+date: "02/05/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r loading-packages}
+package_list <- c("tydyverse",
+                  "janitor",
+                  "dimensionsR")
+
+for(package in package_list){
+  if(package %in% installed.packages() == FALSE){
+    install.packages(package, dependencies = TRUE)
+  }
+  library(package, character.only = TRUE)
+}
+
+```
+
+
+# Introduction
+
+The goal here is twofold:
+
+- Analysing the literature on "scientisation" and finding which types of literature/concepts/tools are influencing
+the issue of the scientisation of central banks
+- Proposing a benchmark for quantitative literature review
+
+# Extracting the data
+
